@@ -6,9 +6,9 @@ browser = webdriver.Firefox()
 browser.get('http://localhost:8000')
 
 # Homepage title  and header mention to-do lists
-
 assert 'To-do' in browser.title
 
+# Close the browser window
 browser.quit()
 
 
