@@ -16,7 +16,8 @@ def test_can_start_a_list_and_retrive_it_later(browser):
 	browser.get('http://localhost:8000')
         
 	# Homepage title  and header mention to-do lists
-	assert 'To-do' == browser.title
+	assert browser.title.find('To-Do') > -1
+	pytest.fail('Finish the test!')
 	
 
 
