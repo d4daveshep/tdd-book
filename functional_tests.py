@@ -1,14 +1,22 @@
 from selenium import webdriver
+import unittest
 
-browser = webdriver.Firefox()
+class NewVisitorTest(unittest.TestCase):
+	def setUp(self):
+		self.browser = webdriver.Firefox()
 
-# Check out the homepage
-browser.get('http://localhost:8000')
+	def tearDown(self):
+		self.browser.quit()
 
-# Homepage title  and header mention to-do lists
-assert 'To-do' in browser.title
+	def test_can_start_a_list_and_retrive_it_later(self):
+		# Check out the homepage
+		self.browser.get('http://localhost:8000')
+        
+		# Homepage title  and header mention to-do lists
+		self.assertIn('To-do', self.browser.title)
+		self.fail('Finish the test!')
 
-# Close the browser window
-browser.quit()
-
-
+if __name__ == '__main__':
+	unittest.main()
+#	pass
+	
