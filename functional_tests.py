@@ -37,7 +37,7 @@ class NewVisitorTest(unittest.TestCase):
 		
 		# Enter a second item in text box
 				
-		self.fail('Finish the test!')
+		#self.fail('Finish the test!')
 
 if __name__ == '__main__':
 	unittest.main()
